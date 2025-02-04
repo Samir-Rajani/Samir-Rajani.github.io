@@ -1,2 +1,2 @@
-- Not live yet
-- Still not complete
+# Sample Ecom Website
+ Sample Ecommerce Website
