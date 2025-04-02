@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+header.header {
+    min-height: 100vh;
+    width: 100%;
+    background: url(images/backdrop.jpeg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+header .text-box {
+    position: absolute;
+    top: 76.5%;
+    left: 76.5%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.left-quote{
+    text-align: left;
+    transform: translate(-50px,10px);
+}
+.right-quote{
+    text-align: right;
+    transform: translate(50px, -30px);
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home{
+    font-style: normal;
+    font-size: 45px;
+    position: absolute;
+    top: 200px;
+    left: 130px;
+    text-decoration: none;
+    color:#000;
+
+}
+.Samir{
+    font-weight: 400;
+}
+nav ul li {
+    margin: 20px 100px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+.projects .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.projects .project-item {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects .project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact a {
+    color: #f44336;
+    text-decoration: none;
+}
