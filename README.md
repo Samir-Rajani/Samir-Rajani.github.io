@@ -1,4 +1,4 @@
 ---
 # 🛠️ Under Progress
 ---
-Still visible: https://www.samir-rajani.github.io
+Still visible: http://www.samir-rajani.github.io
