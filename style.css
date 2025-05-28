@@ -12,28 +12,49 @@ body {
 }
 
 header.header {
+    position: relative;
     min-height: 100vh;
     width: 100%;
     background: url('images/backdrop.jpeg') center center no-repeat;
-    background-position: center;
     background-size: cover;
     
 }
-
-header .text-box {
+.profile-container{
     position: absolute;
-    top: 76.5%;
-    left: 76.5%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
 }
-.left-quote{
-    text-align: left;
-    transform: translate(-50px,10px);
+.profile-pic{
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid black;
 }
-.right-quote{
+
+.text-box {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    display: inline-flex;
+    align-items: center;
+    transform: none;
     text-align: right;
-    transform: translate(50px, -30px);
+    padding: 1rem;
+    width: auto;
+}
+.text-box .left-quote,
+.text-box .right-quote {
+    font-size: 3rem;           /* same h1 sizing as before—tweak if needed */
+    line-height: 1;
+    margin: 0 1rem;          /* small gap around text */
+}
+.text-box .quote-text {
+    font-size: 1rem;           /* original paragraph sizing */
+    margin: 0;
+    line-height: 1.2;
+    color: black;
 }
 nav ul {
     list-style: none;
@@ -46,8 +67,9 @@ nav ul {
     font-style: normal;
     font-size: 45px;
     position: absolute;
-    top: 200px;
-    left: 130px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-175%, -50%);
     text-decoration: none;
     color:#000;
 
@@ -98,4 +120,102 @@ section {
 .contact a {
     color: #f44336;
     text-decoration: none;
+}
+a.project-item,
+a.project-item:visited,
+.project-link-btn,
+.project-link-btn:visited {
+  color: inherit;          /* use your card/text color */
+  text-decoration: none;   /* remove the underline */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    header.header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1rem;            /* give space under the nav */
+    }
+    header.header nav {
+        position: relative;
+        z-index: 10;                  /* stay on top */
+    }
+    .profile-container,
+    .text-box,
+    .home {
+        position: relative !important; /* override absolute */
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        margin: 0.5rem 0;             /* vertical spacing */
+    }
+    /* 4. Center the picture & bump its size if you like */
+    .profile-container {
+        margin-top: 2rem;             /* extra gap from nav */
+    }
+    .profile-pic {
+        width: 220px;                  /* you can tweak */
+        height: 220px;
+    }
+
+    /* 5. Center your quotes/text and scale them for mobile */
+    .text-box {
+        text-align: center;
+    }
+    /*
+    .profile-container {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 120px;
+    }
+    .text-box {
+        position: absolute;
+        bottom: 5%;
+        top: 15% + 120px + 1rem;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translateX(-50%);
+        text-align: center;
+        padding: 0.5rem;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    .home {
+        position: static;
+        display: block;
+    }
+    */
+    /* Change nav to vertical stack */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Reduce nav item margin */
+    nav ul li {
+        margin: 10px 0;
+    }
+    .text-box .left-quote,
+    .text-box .right-quote {
+        font-size: 2.5rem;
+    }
+    .text-box .quote-text {
+        font-size: 1rem;
+    }
+    /* Single-column layout for projects */
+    .projects .project-list {
+        grid-template-columns: 1fr;
+    }
+    /* Reduce section padding */
+    section {
+        padding: 10px;
+    }
 }
