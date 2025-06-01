@@ -172,6 +172,9 @@ a.project-item:visited,
     .text-box {
         text-align: center;
     }
+    .nav-links {
+        display: none;
+    }
     /* Change nav to vertical stack */
     nav ul {
         flex-direction: column;
