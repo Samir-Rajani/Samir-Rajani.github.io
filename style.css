@@ -100,7 +100,7 @@ section {
 }
 .about{
     background: #fff;
-    padding: 20px;
+    padding: 1.25rem;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -168,36 +168,10 @@ a.project-item:visited,
         width: 220px;                  /* you can tweak */
         height: 220px;
     }
-
     /* 5. Center your quotes/text and scale them for mobile */
     .text-box {
         text-align: center;
     }
-    /*
-    .profile-container {
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 120px;
-        height: 120px;
-    }
-    .text-box {
-        position: absolute;
-        bottom: 5%;
-        top: 15% + 120px + 1rem;
-        left: 50%;
-        right: auto;
-        bottom: auto;
-        transform: translateX(-50%);
-        text-align: center;
-        padding: 0.5rem;
-    }
-    .profile-pic {
-        width: 120px;
-        height: 120px;
-    }
-    */
     /* Change nav to vertical stack */
     nav ul {
         flex-direction: column;
@@ -207,19 +181,15 @@ a.project-item:visited,
     nav ul li {
         margin: 10px 0;
     }
-    /*.text-box .left-quote,
-    .text-box .right-quote {
-        font-size: 2.5rem;
+    .about{
+        margin-top: 1.5rem;
     }
-    .text-box .quote-text {
-        font-size: 1rem;
-    }*/
     /* Single-column layout for projects */
     .projects .project-list {
         grid-template-columns: 1fr;
     }
     /* Reduce section padding */
     section {
-        padding: 10px;
+        padding: 0.625rem;
     }
 }
